@@ -27,7 +27,9 @@ function getInitials(name) {
 
 // *** Modify displayQuote ***
 function displayQuote() {
+    // Step 1: Get a random quote object from the array
     const quote = getRandomQuote();
+    // Step 2: Set the text content of the quote paragraph
     quoteTextElement.textContent = `"${quote.text}"`; // Add quotes around the text
     // *** Display initials along with name ***
     const initials = getInitials(quote.author);
@@ -41,7 +43,7 @@ if (newQuoteButton) { // Check if button exists before adding listener
     console.log("Button found, adding listener."); // NEW LINE
     newQuoteButton.addEventListener('click', displayQuote);
 } else {
-    console.error("Button with ID 'new-quote-btn' not found.");
+    console.error("Button with id 'new-quote-btn' not found.");
 }
 
 // --- Initial Load ---
